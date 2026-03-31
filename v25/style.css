@@ -1,0 +1,315 @@
+/* v25 — Final Version */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0e0c09;
+  --text:      #ede8e0;
+  --heading:   #ffffff;
+  --accent:    #c8a96e;
+  --muted:     #9a8f84;
+  --border:    rgba(200,169,110,0.15);
+  --rule:      rgba(200,169,110,0.3);
+  --max-w:     720px;
+  --pad-x:     4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* ─── Fixed Site Bar ─── */
+.site-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem var(--pad-x);
+  background: rgba(14,12,9,0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-bar-name {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+
+.site-bar-back {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: rgba(200,169,110,0.55);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  background: rgba(200,169,110,0.07);
+  border: 1px solid rgba(200,169,110,0.22);
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.site-bar-back:hover {
+  color: var(--accent);
+  border-color: rgba(200,169,110,0.5);
+  background: rgba(200,169,110,0.13);
+}
+
+/* ─── Page wrapper ─── */
+.page {
+  padding-top: 48px;
+}
+
+/* ─── Hero Section ─── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14,12,9,0.97) 0%,
+    rgba(14,12,9,0.6) 40%,
+    rgba(14,12,9,0.15) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--pad-x) 5rem;
+}
+
+.hero-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: normal;
+  color: var(--heading);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(237,232,224,0.5);
+  line-height: 1.55;
+  max-width: 480px;
+}
+
+/* ─── Entry number margin indicators ─── */
+.entries-wrapper {
+  max-width: calc(var(--max-w) + 80px);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  position: relative;
+}
+
+/* ─── Entry ─── */
+article {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0 2rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+.entry-num-margin {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(200,169,110,0.25);
+  padding-top: 6px;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.entry-body-col {
+  border-top: 1px solid rgba(200,169,110,0.15);
+  padding-top: 6rem;
+  padding-bottom: 0;
+}
+
+/* First entry doesn't need top padding since it follows hero */
+article:first-child .entry-body-col {
+  padding-top: 0;
+  border-top: none;
+}
+
+.entry-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.entry-title {
+  font-size: 42px;
+  font-weight: normal;
+  color: var(--heading);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.entry-date {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.entry-text {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(237,232,224,0.82);
+  margin-bottom: 2rem;
+}
+
+/* Pull quote */
+.pull-quote {
+  font-size: 19px;
+  font-style: italic;
+  color: rgba(237,232,224,0.62);
+  border-left: 3px solid rgba(200,169,110,0.35);
+  padding: 0.75rem 1.4rem;
+  margin: 1.75rem 0 2.25rem;
+  line-height: 1.55;
+}
+
+/* Figure */
+.entry-figure {
+  margin: 2rem 0 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.entry-figcaption {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Footer ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 4rem var(--pad-x);
+  max-width: calc(var(--max-w) + 80px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: rgba(237,232,224,0.18);
+  letter-spacing: 0.1em;
+}
+
+footer a {
+  color: rgba(200,169,110,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 1.5rem;
+  }
+  .site-bar {
+    padding: 0.8rem 1.5rem;
+  }
+  article {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .entry-num-margin {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  .entry-body-col {
+    padding-top: 0.5rem;
+  }
+  article:first-child .entry-body-col {
+    padding-top: 0;
+  }
+  .hero-content {
+    padding-bottom: 3rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

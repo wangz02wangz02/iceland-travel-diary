@@ -1,0 +1,149 @@
+/* v20 — Core Direction (Editorial Journal) */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0c0a08;
+  color: #f0ebe4;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Nav */
+.site-nav {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid rgba(240,235,228,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav a {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.35);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover {
+  color: #f0ebe4;
+}
+
+.site-nav-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: rgba(240,235,228,0.2);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Site Header */
+.site-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 3rem 4rem;
+  border-bottom: 1px solid rgba(240,235,228,0.08);
+}
+
+.site-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(240,235,228,0.35);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.site-title {
+  font-size: 46px;
+  font-weight: normal;
+  color: #f0ebe4;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.site-sub {
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(240,235,228,0.5);
+}
+
+/* Main */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Entry */
+article {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(240,235,228,0.06);
+}
+
+.entry-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(240,235,228,0.3);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.entry-title {
+  font-size: 30px;
+  font-weight: normal;
+  color: #f0ebe4;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.35);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.entry-body {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(240,235,228,0.85);
+  margin-bottom: 2.5rem;
+}
+
+.entry-figure {
+  margin: 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 4rem 3rem;
+  border-top: 1px solid rgba(240,235,228,0.06);
+  margin-top: 1rem;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.2);
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,163 @@
+/* v21 — Refined Typography */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0c0a08;
+  color: #f0ebe4;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px; /* base */
+  line-height: 1.75;
+}
+
+/* Type scale: 12, 16, 20, 28, 42, 64 */
+
+/* Nav */
+.site-nav {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid rgba(240,235,228,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav a {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.35);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover {
+  color: #f0ebe4;
+}
+
+.site-nav-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.2);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Site Header */
+.site-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 3rem 4rem;
+  border-bottom: 1px solid rgba(240,235,228,0.08);
+}
+
+.site-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(240,235,228,0.3);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.site-title {
+  font-size: 64px; /* type scale max */
+  font-weight: normal;
+  color: #f0ebe4;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.site-sub {
+  font-size: 20px;
+  font-style: italic;
+  color: rgba(240,235,228,0.5);
+  line-height: 1.5;
+}
+
+/* Main */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Entry */
+article {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(240,235,228,0.06);
+}
+
+.entry-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(240,235,228,0.28);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.entry-title {
+  font-size: 42px; /* type scale */
+  font-weight: normal;
+  color: #f0ebe4;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.32);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.entry-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(240,235,228,0.82);
+  margin-bottom: 2rem;
+}
+
+/* Pull quote */
+.pull-quote {
+  font-size: 20px; /* type scale */
+  font-style: italic;
+  color: rgba(240,235,228,0.7);
+  border-left: 4px solid rgba(240,235,228,0.2);
+  padding: 0.75rem 1.5rem;
+  margin: 2rem 0 2.5rem;
+  line-height: 1.5;
+}
+
+.entry-figure {
+  margin: 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 4rem 3rem;
+  border-top: 1px solid rgba(240,235,228,0.06);
+}
+
+footer p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(240,235,228,0.18);
+  letter-spacing: 0.1em;
+}
