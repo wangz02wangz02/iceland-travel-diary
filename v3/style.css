@@ -1,0 +1,203 @@
+/* v3 — Magazine Editorial */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Nav */
+nav.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  border-bottom: 3px solid #1a1a1a;
+}
+
+nav.topbar a {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 12px;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+nav.topbar a:hover {
+  color: #e63946;
+}
+
+.topbar-title {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+/* Magazine Header */
+.mag-header {
+  padding: 4rem 3rem 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mag-kicker {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.mag-title {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: clamp(52px, 8vw, 110px);
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.mag-deck {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #444444;
+  max-width: 600px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Main Grid */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Entry Grid Layouts */
+.entry-grid {
+  display: grid;
+  gap: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5rem 0;
+}
+
+.entry-grid.layout-right {
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.entry-grid.layout-left {
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.entry-grid.layout-full {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
+/* Section Number */
+.section-number {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 72px;
+  color: #e63946;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.entry-heading h2 {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.entry-date {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.entry-body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+/* Pull Quote */
+.pull-quote {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #1a1a1a;
+  border-left: 4px solid #e63946;
+  padding: 1rem 1.5rem;
+  margin: 2.5rem 0;
+  line-height: 1.5;
+}
+
+.entry-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.entry-image.tall img {
+  height: 600px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 3px solid #1a1a1a;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-family: Impact, 'Arial Narrow', system-ui, sans-serif;
+  font-size: 11px;
+  color: #888888;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .entry-grid.layout-right,
+  .entry-grid.layout-left {
+    grid-template-columns: 1fr;
+  }
+  nav.topbar,
+  .mag-header,
+  main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

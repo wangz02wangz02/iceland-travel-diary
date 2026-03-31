@@ -1,0 +1,142 @@
+/* v1 — Clean Minimal */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Navigation */
+.nav-back {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nav-back a {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #888888;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-back a:hover {
+  color: #111111;
+}
+
+/* Site Header */
+.site-header {
+  text-align: center;
+  padding: 4rem 2rem 5rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 14px;
+  font-weight: normal;
+  color: #888888;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.site-headline {
+  font-size: 36px;
+  font-weight: normal;
+  color: #111111;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.site-subhead {
+  font-size: 15px;
+  color: #888888;
+  font-style: italic;
+}
+
+/* Main Content */
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Entries */
+article {
+  margin-bottom: 6rem;
+}
+
+.entry-meta {
+  margin-bottom: 1.5rem;
+}
+
+.entry-number {
+  font-size: 12px;
+  color: #888888;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.entry-title {
+  font-size: 26px;
+  font-weight: normal;
+  color: #111111;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-size: 13px;
+  color: #888888;
+  font-style: italic;
+}
+
+.entry-body {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #111111;
+  margin-bottom: 2.5rem;
+}
+
+.entry-figure {
+  margin: 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Divider */
+.entry-divider {
+  width: 40px;
+  height: 1px;
+  background-color: #cccccc;
+  margin: 0 auto 6rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid #eeeeee;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 13px;
+  color: #888888;
+  font-style: italic;
+}
