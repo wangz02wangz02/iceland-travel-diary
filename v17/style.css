@@ -1,0 +1,230 @@
+/* v17 — Cinematic Split (v5 + v10) */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #080808;
+  color: #f0f0f0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Nav */
+.nav-back {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 200;
+}
+
+.nav-back a {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.6);
+  padding: 0.4rem 0.8rem;
+  backdrop-filter: blur(4px);
+}
+
+.nav-back a:hover {
+  color: #ffffff;
+}
+
+/* Hero section */
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-title {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+}
+
+/* Full-height entry sections */
+.entry-section {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* Alternate: image left, text right; image right, text left */
+.entry-section.img-left .entry-image { order: 1; }
+.entry-section.img-left .entry-text  { order: 2; }
+.entry-section.img-right .entry-image { order: 2; }
+.entry-section.img-right .entry-text  { order: 1; }
+
+/* Image half */
+.entry-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.entry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+/* Text half */
+.entry-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem;
+  background: #0a0a0a;
+  border-left: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+}
+
+.entry-section.img-right .entry-text {
+  border-left: none;
+  border-right: 1px solid rgba(255,255,255,0.04);
+}
+
+.entry-number {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.2);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.entry-title {
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.75rem;
+}
+
+.entry-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(240,240,240,0.65);
+  font-weight: 300;
+  max-width: 400px;
+}
+
+/* Bg number watermark */
+.entry-text::after {
+  content: attr(data-num);
+  position: absolute;
+  bottom: -0.1em;
+  right: -0.05em;
+  font-size: 18vw;
+  font-weight: 900;
+  color: rgba(255,255,255,0.02);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem;
+  background: #000000;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+footer p {
+  font-size: 11px;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .entry-section {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+  .entry-image {
+    height: 55vw;
+  }
+  .entry-section.img-left .entry-image,
+  .entry-section.img-right .entry-image {
+    order: 1;
+  }
+  .entry-section.img-left .entry-text,
+  .entry-section.img-right .entry-text {
+    order: 2;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 3rem 2rem;
+  }
+}

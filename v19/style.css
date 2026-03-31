@@ -1,0 +1,155 @@
+/* v19 — Photo Essay (v10 + v1) */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Nav */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.site-nav a {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: #999999;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+
+.site-nav a:hover {
+  color: #111111;
+}
+
+.site-nav-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: #cccccc;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Intro */
+.intro {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 6rem 3rem 5rem;
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 38px;
+  font-weight: normal;
+  color: #111111;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.intro-sub {
+  font-size: 15px;
+  color: #888888;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Photo Entry */
+article {
+  margin-bottom: 8rem;
+}
+
+/* Full-width image */
+.photo-full {
+  width: 100%;
+  display: block;
+  margin: 0;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  background: #f8f8f8;
+}
+
+/* Wide image variant — bleeds full edge */
+.photo-wide {
+  width: 100%;
+  display: block;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Caption area */
+.photo-caption {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem 0;
+}
+
+.caption-number {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  color: #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.caption-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.caption-time {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: #bbbbbb;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.caption-text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #666666;
+  font-style: italic;
+}
+
+/* Spacer between entries */
+.photo-spacer {
+  width: 1px;
+  height: 4rem;
+  background: transparent;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5rem 3rem;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 4rem;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: #cccccc;
+  letter-spacing: 0.08em;
+}
