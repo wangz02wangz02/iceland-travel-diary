@@ -1,0 +1,203 @@
+/* v6 — Vintage Journal */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5efe6;
+  color: #3d2b1f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+/* Nav */
+.nav-back {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid #8b6348;
+}
+
+.nav-back a {
+  font-size: 13px;
+  color: #8b6348;
+  text-decoration: none;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.nav-back a:hover {
+  color: #3d2b1f;
+  text-decoration: underline;
+}
+
+/* Journal Cover */
+.journal-cover {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  border-bottom: 1px solid #c9b49a;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cover-ornament {
+  font-size: 28px;
+  color: #8b6348;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5em;
+}
+
+.journal-title {
+  font-size: 46px;
+  font-weight: normal;
+  font-style: italic;
+  color: #3d2b1f;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.journal-subtitle {
+  font-size: 14px;
+  color: #8b6348;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.cover-rule {
+  width: 80px;
+  height: 1px;
+  background: #8b6348;
+  margin: 0 auto 2rem;
+}
+
+.cover-date {
+  font-size: 14px;
+  font-style: italic;
+  color: #8b6348;
+}
+
+/* Main */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* Ornamental Rule */
+.ornamental-rule {
+  text-align: center;
+  color: #8b6348;
+  font-size: 18px;
+  letter-spacing: 0.5em;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ornamental-rule::before,
+.ornamental-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #c9b49a;
+}
+
+/* Entry */
+article {
+  padding: 4rem 0;
+}
+
+.entry-meta {
+  margin-bottom: 2rem;
+}
+
+.entry-number {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #8b6348;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.entry-title {
+  font-size: 28px;
+  font-weight: normal;
+  font-style: italic;
+  color: #3d2b1f;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.entry-date {
+  font-size: 13px;
+  color: #8b6348;
+  font-style: italic;
+  display: block;
+}
+
+.entry-body {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #3d2b1f;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+/* Drop cap */
+.entry-body::first-letter {
+  font-size: 64px;
+  line-height: 0.85;
+  float: left;
+  margin-right: 0.1em;
+  margin-top: 0.06em;
+  color: #8b6348;
+  font-style: normal;
+}
+
+/* Figure */
+.entry-figure {
+  margin: 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: sepia(30%) contrast(0.95) brightness(0.98);
+}
+
+.entry-figcaption {
+  font-size: 13px;
+  font-style: italic;
+  color: #8b6348;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #c9b49a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid #c9b49a;
+  margin-top: 2rem;
+}
+
+.footer-ornament {
+  font-size: 20px;
+  color: #8b6348;
+  letter-spacing: 0.5em;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 13px;
+  font-style: italic;
+  color: #8b6348;
+}
