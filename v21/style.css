@@ -1,125 +1,65 @@
-/* v21 — Refined Typography: modular scale, Georgia body, tighter hierarchy */
+/* v21 — Staggered: scottsnyderphoto.com-inspired photo-forward stagger */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #f8f7f4;
-  color: #1a1a1a;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.75;
+  background: #fff;
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.75rem 3rem;
-  border-bottom: 1px solid #e4e2dd;
-  font-family: system-ui, sans-serif;
+  padding: 1.75rem 7vw;
+  font-size: 12px;
 }
 
 nav a {
-  font-size: 0.75rem;
-  color: #888;
+  color: #999;
   text-decoration: none;
-  letter-spacing: 0.05em;
-}
-
-nav a:hover { color: #1a1a1a; }
-
-nav span {
-  font-size: 0.72rem;
-  color: #bbb;
-  letter-spacing: 0.1em;
-}
-
-header {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 7rem 3rem 5rem;
-  border-bottom: 1px solid #e4e2dd;
-}
-
-.label {
-  font-family: system-ui, sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #aaa;
-  margin-bottom: 1.75rem;
-  display: block;
-}
-
-header h1 {
-  font-size: clamp(2.6rem, 5.5vw, 4rem);
-  font-weight: normal;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  color: #0f0f0f;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #888;
-}
-
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
-
-article {
-  padding: 4.5rem 0;
-  border-bottom: 1px solid #e8e6e1;
-}
-
-.entry-meta {
-  font-family: system-ui, sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1.5rem;
-}
-
-time {
-  font-size: 0.75rem;
-  color: #888;
-  letter-spacing: 0.05em;
-}
-
-.divider {
-  color: #ccc;
-  font-size: 0.75rem;
-}
-
-.location {
-  font-size: 0.75rem;
-  color: #aaa;
   letter-spacing: 0.04em;
 }
 
-article h2 {
-  font-size: 1.75rem;
-  font-weight: normal;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #0f0f0f;
-  margin-bottom: 1.1rem;
+nav a:hover { color: #111; }
+
+nav span {
+  color: #bbb;
+  letter-spacing: 0.06em;
 }
 
-article p {
-  font-size: 1.05rem;
-  color: #3a3a3a;
-  line-height: 1.85;
-  margin-bottom: 2.75rem;
+header {
+  padding: 3vw 7vw 5vw;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Staggered grid — 7vw padding, 34px gaps like scottsnyderphoto */
+.stagger {
+  padding: 0 7vw;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.stagger-row {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 34px;
+  align-items: end;
+}
+
+.stagger-row--reverse {
+  grid-template-columns: 40fr 60fr;
 }
 
 figure {
@@ -128,16 +68,46 @@ figure {
 
 figure img {
   width: 100%;
-  height: auto;
   display: block;
+  object-fit: cover;
+}
+
+.fig--wide img {
+  aspect-ratio: 3 / 2;
+}
+
+.fig--narrow img {
+  aspect-ratio: 2 / 3;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 0.05em;
 }
 
 footer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 3rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.72rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw 7vw;
+  font-size: 11px;
   color: #bbb;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+footer a:hover { color: #111; }
+
+@media (max-width: 640px) {
+  .stagger-row,
+  .stagger-row--reverse {
+    grid-template-columns: 1fr;
+  }
+  .fig--narrow img { aspect-ratio: 3 / 2; }
 }

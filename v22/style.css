@@ -1,165 +1,102 @@
-/* v22 — Grid Layout: alternating image/text, Scandinavian structure */
+/* v22 — Full-bleed alternating: edge-to-edge images, text running beside */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #f7f6f2;
-  color: #1a1a1a;
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.7;
+  background: #fff;
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.75rem 4rem;
-  border-bottom: 1px solid #e2e0da;
-  font-family: system-ui, sans-serif;
+  padding: 1.25rem 4vw;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+  font-size: 12px;
 }
 
 nav a {
-  font-size: 0.75rem;
   color: #999;
   text-decoration: none;
-  letter-spacing: 0.05em;
-  transition: color 0.15s;
+  letter-spacing: 0.04em;
 }
 
 nav a:hover { color: #111; }
 
-nav span {
-  font-size: 0.72rem;
-  color: #ccc;
-  letter-spacing: 0.12em;
-}
+nav span { color: #ddd; letter-spacing: 0.08em; }
 
-header {
-  padding: 7rem 4rem 6rem;
-  border-bottom: 1px solid #e2e0da;
-}
-
-.header-inner {
-  max-width: 560px;
-}
-
-.label {
-  font-family: system-ui, sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #aaa;
-  display: block;
-  margin-bottom: 2rem;
-}
-
-header h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: normal;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: #0d0d0d;
-}
-
-main {
-  padding: 0;
-}
-
+/* Each section is a full-viewport row */
 .entry {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #e2e0da;
+  grid-template-columns: 58% 42%;
+  min-height: 70vh;
 }
 
-.entry-text {
-  padding: 5rem 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.entry--flip {
+  grid-template-columns: 42% 58%;
 }
 
-.entry-num {
-  font-family: system-ui, sans-serif;
-  font-size: 0.68rem;
-  color: #ccc;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.4rem;
-}
+.entry--flip .entry-img { order: 2; }
+.entry--flip .entry-text { order: 1; }
 
-time {
-  font-family: system-ui, sans-serif;
-  font-size: 0.75rem;
-  color: #999;
-  letter-spacing: 0.05em;
-  display: block;
-  margin-bottom: 1.5rem;
-}
-
-.entry-text h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  font-weight: normal;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #0d0d0d;
-  margin-bottom: 1.25rem;
-}
-
-.entry-text p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.85;
-  max-width: 420px;
-}
-
-.entry-image {
-  margin: 0;
+.entry-img {
   overflow: hidden;
 }
 
-.entry-image img {
+.entry-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.entry--text-right {
-  direction: rtl;
+.entry-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw 5vw;
 }
 
-.entry--text-right .entry-text {
-  direction: ltr;
-}
-
-.entry--text-right .entry-image {
-  direction: ltr;
-}
-
-footer {
-  padding: 3rem 4rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.72rem;
-  color: #ccc;
+.ts {
+  display: block;
+  font-size: 11px;
+  color: #bbb;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.entry-text h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.entry-text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 380px;
 }
 
 @media (max-width: 700px) {
-  .entry {
+  .entry,
+  .entry--flip {
     grid-template-columns: 1fr;
-    direction: ltr;
+    grid-template-rows: auto auto;
+    min-height: unset;
   }
-  .entry--text-right {
-    direction: ltr;
-  }
-  .entry-image {
-    aspect-ratio: 4 / 3;
-  }
-  header { padding: 4rem 2rem; }
-  nav { padding: 1.5rem 2rem; }
-  .entry-text { padding: 3rem 2rem; }
-  footer { padding: 2.5rem 2rem; }
+  .entry--flip .entry-img { order: unset; }
+  .entry--flip .entry-text { order: unset; }
+  .entry-img img { aspect-ratio: 3 / 2; height: auto; }
+  .entry-text { padding: 8vw 6vw; }
 }
