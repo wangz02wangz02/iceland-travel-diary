@@ -1,4 +1,4 @@
-/* v20 — Core Direction (Editorial Journal) */
+/* v20 — Swedish Minimalist: Foundation */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,143 +7,123 @@
 }
 
 body {
-  background-color: #0c0a08;
-  color: #f0ebe4;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
-  line-height: 1.75;
+  background: #f8f7f4;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
-/* Nav */
-.site-nav {
-  padding: 1.5rem 3rem;
-  border-bottom: 1px solid rgba(240,235,228,0.08);
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.75rem 3rem;
+  border-bottom: 1px solid #e4e2dd;
 }
 
-.site-nav a {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 12px;
-  color: rgba(240,235,228,0.35);
+nav a {
+  font-size: 0.8rem;
+  color: #888;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.site-nav a:hover {
-  color: #f0ebe4;
+nav a:hover { color: #1a1a1a; }
+
+nav span {
+  font-size: 0.75rem;
+  color: #bbb;
+  letter-spacing: 0.08em;
 }
 
-.site-nav-title {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 11px;
-  color: rgba(240,235,228,0.2);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-/* Site Header */
-.site-header {
-  max-width: 720px;
+header {
+  max-width: 680px;
   margin: 0 auto;
-  padding: 5rem 3rem 4rem;
-  border-bottom: 1px solid rgba(240,235,228,0.08);
+  padding: 6rem 3rem 5rem;
 }
 
-.site-label {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 10px;
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(240,235,228,0.35);
+  color: #999;
   margin-bottom: 1.5rem;
-  display: block;
 }
 
-.site-title {
-  font-size: 46px;
-  font-weight: normal;
-  color: #f0ebe4;
-  line-height: 1.15;
-  margin-bottom: 1rem;
+header h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #111;
 }
 
-.site-sub {
-  font-size: 16px;
-  font-style: italic;
-  color: rgba(240,235,228,0.5);
-}
-
-/* Main */
 main {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 3rem;
 }
 
-/* Entry */
 article {
-  padding: 5rem 0;
-  border-bottom: 1px solid rgba(240,235,228,0.06);
+  padding: 4rem 0;
+  border-top: 1px solid #e4e2dd;
 }
 
-.entry-label {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(240,235,228,0.3);
-  display: block;
-  margin-bottom: 0.75rem;
+.entry-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
-.entry-title {
-  font-size: 30px;
-  font-weight: normal;
-  color: #f0ebe4;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+.entry-num {
+  font-size: 0.7rem;
+  color: #bbb;
+  letter-spacing: 0.1em;
 }
 
-.entry-date {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 12px;
-  color: rgba(240,235,228,0.35);
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 2rem;
+time {
+  font-size: 0.78rem;
+  color: #999;
+  letter-spacing: 0.04em;
 }
 
-.entry-body {
-  font-size: 18px;
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+article p {
+  color: #444;
   line-height: 1.8;
-  color: rgba(240,235,228,0.85);
   margin-bottom: 2.5rem;
 }
 
-.entry-figure {
+figure {
   margin: 0;
 }
 
-.entry-figure img {
+figure img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Footer */
 footer {
-  text-align: center;
-  padding: 4rem 3rem;
-  border-top: 1px solid rgba(240,235,228,0.06);
-  margin-top: 1rem;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-top: 1px solid #e4e2dd;
+  margin-top: 2rem;
 }
 
 footer p {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 12px;
-  color: rgba(240,235,228,0.2);
+  font-size: 0.75rem;
+  color: #bbb;
   letter-spacing: 0.1em;
 }
