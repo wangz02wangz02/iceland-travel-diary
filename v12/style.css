@@ -1,0 +1,192 @@
+/* v12 — Dark Journal (v2 + v6) */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0b08;
+  color: #e8ddd0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+/* Nav */
+.nav-back {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(245,200,66,0.15);
+}
+
+.nav-back a {
+  font-size: 12px;
+  color: rgba(245,200,66,0.5);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-style: italic;
+}
+
+.nav-back a:hover {
+  color: #f5c842;
+}
+
+/* Cover */
+.journal-cover {
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  border-bottom: 1px solid rgba(245,200,66,0.2);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.cover-ornament {
+  font-size: 20px;
+  color: rgba(245,200,66,0.4);
+  letter-spacing: 0.8em;
+  margin-bottom: 2rem;
+}
+
+.journal-title {
+  font-size: 48px;
+  font-weight: normal;
+  font-style: italic;
+  color: #f5c842;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.journal-sub {
+  font-size: 13px;
+  color: rgba(232,221,208,0.5);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.cover-date {
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(232,221,208,0.6);
+}
+
+/* Main */
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* Ornamental rule */
+.ornamental-rule {
+  text-align: center;
+  margin: 4.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(245,200,66,0.35);
+  font-size: 14px;
+  letter-spacing: 0.5em;
+}
+
+.ornamental-rule::before,
+.ornamental-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(245,200,66,0.2);
+}
+
+/* Entry */
+article {
+  padding: 4.5rem 0;
+}
+
+.entry-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(245,200,66,0.45);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.entry-title {
+  font-size: 30px;
+  font-weight: normal;
+  font-style: italic;
+  color: #f5c842;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.entry-date {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(232,221,208,0.45);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.entry-body {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #e8ddd0;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.entry-body::first-letter {
+  font-size: 60px;
+  line-height: 0.85;
+  float: left;
+  margin-right: 0.08em;
+  margin-top: 0.06em;
+  color: rgba(245,200,66,0.6);
+  font-style: normal;
+}
+
+/* Figure with amber border */
+.entry-figure {
+  margin: 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid rgba(245,200,66,0.25);
+  filter: brightness(0.9) sepia(10%);
+}
+
+.entry-figcaption {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(245,200,66,0.4);
+  text-align: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(245,200,66,0.12);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(245,200,66,0.15);
+  margin-top: 2rem;
+}
+
+.footer-ornament {
+  font-size: 16px;
+  color: rgba(245,200,66,0.3);
+  letter-spacing: 0.6em;
+  margin-bottom: 1.5rem;
+}
+
+footer p {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(232,221,208,0.35);
+}
